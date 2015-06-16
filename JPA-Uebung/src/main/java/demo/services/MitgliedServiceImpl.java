@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import demo.model.MMitglied;
-@Component("playListService")
+@Component("MitgliedService")
 @Transactional
 public class MitgliedServiceImpl implements MitgliedService {
 	private MitgliedRepository mRepository;

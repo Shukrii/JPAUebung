@@ -23,12 +23,12 @@ public class MMitglied implements Serializable {
 
 	//bi-directional many-to-one association to AuAutohaus
 	@ManyToOne
-	@JoinColumn(name="m_au_id")
+	@JoinColumn(name="m_au_id", insertable=false, updatable=false)
 	private AuAutohaus auAutohaus;
 
 	//bi-directional many-to-one association to KKunde
 	@ManyToOne
-	@JoinColumn(name="m_k_id")
+	@JoinColumn(name="m_k_id", insertable=false, updatable=false)
 	private KKunde KKunde;
 
 	public MMitglied() {

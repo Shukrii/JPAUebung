@@ -5,6 +5,7 @@ import java.util.List;
 import demo.model.AAuto;
 
 public interface AutoService  {
+	List<AAuto> findAll();
 	List<AAuto> findByNameLike(String name);
 	AAuto findOne(int id);
 	AAuto save(AAuto a);

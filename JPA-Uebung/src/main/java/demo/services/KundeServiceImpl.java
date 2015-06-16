@@ -23,4 +23,27 @@ public class KundeServiceImpl implements KundeService {
 		return (List<KKunde>) kundeRepository.findAll();
 	}
 
+	@Override
+	 @Transactional(readOnly=true)
+	 public KKunde findByNameLike(String kunde) {
+	  return (KKunde) kundeRepository.findByNameLike(kunde);
+	 }
+	 @Override
+	 @Transactional(readOnly=true)
+	 public KKunde findOne(int id) {
+	  return kundeRepository.findOne(id);
+	 }
+	 @Override
+	 public KKunde save(KKunde k) {
+	  return kundeRepository.save(k);
+	 }
+	 @Override
+	 public void delete(int id) {
+	  kundeRepository.delete(id);
+	 }
+	 @Override
+	 @Transactional(readOnly=true)
+	 public long length() {
+	  return kundeRepository.count();
+	 }
 }

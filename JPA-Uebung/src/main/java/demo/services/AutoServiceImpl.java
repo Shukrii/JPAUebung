@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 import demo.model.AAuto;
-import demo.services.*;
 
 
 @Component("autoService")
@@ -17,6 +16,11 @@ public class AutoServiceImpl implements AutoService {
 	@Autowired
 	public AutoServiceImpl(AutoRepository aRepository) {
 		this.aRepository = aRepository;
+	}
+	
+	@Override
+	public List<AAuto> findAll() {
+		return (List<AAuto>) aRepository.findAll();
 	}
 
 	@Override
